@@ -1,4 +1,4 @@
-# TryOn AI 👟
+# Tryfit-On 👟
 
 > Virtual Shoe Tryfit-On Experience – powered by Canvas Simulation
 
