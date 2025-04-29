@@ -1,4 +1,4 @@
-import * as deepar from 'deepar';
+//import * as deepar from 'deepar';
 
 // Log the version. Just in case.
 console.log("Deepar version: " + deepar.version);
