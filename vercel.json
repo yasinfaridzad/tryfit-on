@@ -1,6 +1,13 @@
 {
-  "framework": null,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "webpack --config webpack.config.js --mode production && mkdir -p dist && cp -r public/* dist && cp -r node_modules/deepar dist/deepar-resources",
+        "outputDirectory": "dist"
+      }
+    }
   ]
 }
