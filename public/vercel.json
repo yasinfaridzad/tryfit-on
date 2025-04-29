@@ -3,11 +3,14 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/node",
+      "use": "@vercel/static-build",
       "config": {
-        "buildCommand": "webpack --config webpack.config.js --mode production && mkdir -p dist && cp -r public/* dist && cp -r node_modules/deepar dist/deepar-resources",
-        "outputDirectory": "dist"
+        "distDir": "dist"
       }
     }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
